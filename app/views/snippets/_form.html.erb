@@ -1,0 +1,23 @@
+<div class="post_form">
+  <%= form_for [@project, @snippet] do |f| %>
+  <% if @snippet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@snippet.errors.count, "error") %> prohibited this snippet from being saved:</h2>
+      <ul>
+      <% @snippet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.label :body %>
+    <p><%= f.text_area  :body %></p>
+    <p><%= select_languages %></p>
+    <%= f.label :tag_list %>
+    <p><%= f.text_field  :tag_list %></p>
+    <p><%= f.submit %></p>
+  </div>
+<% end %>
+</div>

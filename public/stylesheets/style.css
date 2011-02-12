@@ -1,0 +1,210 @@
+body{
+    background: white;
+    margin: 0;
+}
+
+#container{
+    margin: auto;
+    width: 960px;
+    overflow: hidden;
+    background: #DCDCDB;
+    border-left: 1px solid #C0DEED;
+    border-right: 1px solid #C0DEED;
+}
+
+#header{
+    height: 50px;
+    clear: both;
+    background: #C0DEED;
+    -moz-border-radius: 0 0 10px 10px;
+}
+
+#dashboard{
+    height: 50px;
+    width: 400px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+#leftnavigation{
+    width: 200px;
+    float: left;
+    height: 100%;
+}
+
+#leftnavigation li{
+    border-bottom: 1px solid #CFCFCF;
+}
+
+#leftnavigation li a{
+   color: #343434;
+   display: block;
+   height: 30px;
+}
+
+#leftnavigation li a:hover{
+    color: #848484;
+}
+
+#leftnavigation li:hover{
+    background:#CFCFCF;
+}
+
+#content{
+    overflow: hidden;
+    padding-left: 20px;
+    border-left: 1px dotted #C0DEED;
+    background: #F0F0F0;
+}
+
+#footer{
+    height: 40px;
+    background: #8EC1DA;
+    clear: both;
+}
+ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+#dashboard_list{
+    float: left;
+    margin-left: 40px;
+}
+
+#dashboard_list li{
+    height: 32px;
+    width: 32px;
+    float: left;
+    margin-left: 15px;
+}
+
+img{
+    border:0;
+}
+
+.hidedashboard{
+    display: none;
+}
+
+.showdashboard, .hidedashboard{
+    float: right;
+    width:  32px;
+    height: 32px;
+
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.snippet, .note{
+    clear: both;
+}
+
+.CodeRay {
+  background-color: #232323;
+  font-family: 'Courier New', 'Terminal', monospace;
+  color: #E6E0DB;
+  padding: 3px 5px;
+  overflow: auto;
+  font-size: 12px;
+  margin: 12px 0;
+}
+.CodeRay pre {
+  margin: 0px;
+  padding: 0px;
+}
+
+.CodeRay .an { color:#E7BE69 } /* html attribute */
+.CodeRay .c { color:#BC9358; font-style: italic; } /* comment */
+.CodeRay .ch { color:#509E4F } /* escaped character */
+.CodeRay .cl { color:#FFF } /* class */
+.CodeRay .co { color:#FFF } /* constant */
+.CodeRay .fl { color:#A4C260 } /* float */
+.CodeRay .fu { color:#FFC56D } /* function */
+.CodeRay .gv { color:#D0CFFE } /* global variable */
+.CodeRay .i { color:#A4C260 } /* integer */
+.CodeRay .il { background:#151515 } /* inline code */
+.CodeRay .iv { color:#D0CFFE } /* instance variable */
+.CodeRay .pp { color:#E7BE69 } /* doctype */
+.CodeRay .r { color:#CB7832 } /* keyword */
+.CodeRay .rx { color:#A4C260 } /* regex */
+.CodeRay .s { color:#A4C260 } /* string */
+.CodeRay .sy { color:#6C9CBD } /* symbol */
+.CodeRay .ta { color:#E7BE69 } /* html tag */
+.CodeRay .pc { color:#6C9CBD } /* boolean */
+
+
+.hidemenu{
+    display:none;
+}
+
+/*projects */
+
+
+.pagination{
+    margin-bottom: 10px;
+}
+
+.pagination a{
+    border: 1px solid gray;
+    padding: 2px;
+}
+
+.pagination a:hover{
+    background:  #DCDCDB;
+}
+
+#dialog{
+    display: none;
+    background: red;
+    width: 100%;
+}
+.ui-dialog-titlebar-close{
+    background: red;
+}
+
+.tag{
+    padding: 5px;
+    text-decoration: underline;
+    color: #343434;
+}
+
+.tag:hover{
+    color: #CADCEB;
+}
+
+.feature{
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+.implemented{
+  background: #E4F7BD;
+}
+.unimplemented{
+  background: #FE6055;
+}
+
+.in_progress{
+  background: #FFD77E;
+}
+
+.note{
+  margin-bottom: 20px;
+  padding-left: 5px;
+  background: white;
+}
+
+.note div{
+  margin-bottom: 5px;
+}
+
+.links{
+  clear: both;
+  margin-left: 680px;
+}
+

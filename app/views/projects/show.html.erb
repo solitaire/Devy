@@ -1,0 +1,28 @@
+<div class="project">
+  <div class="links">
+      <%= link_to image_tag("/images/edit.png"), edit_project_path(@project) %>
+      <%= link_to image_tag("/images/delete.png"), project_path(@project),:method => "delete", :confirm => "Are you sure?" %>
+  </div>
+  <h2><%= @project.name %> </h2>
+  <p><%=  @project.description %> </p>
+  <p><%= render :partial => "tags/tag", :collection => @project.tags %></p>
+    <div id="project_features">
+    <h2><%=link_to "Features", new_project_feature_path(@project)%>:</h2>
+    <ul>
+    <%= render @project.features %>
+    </ul>
+  </div>
+  <div id="project_notes">
+    <h2>Notes:</h2>
+    <%= render @project.notes %>
+  </div>
+  <h2><a href="#" id="dialog_open">Snippets:</a></h2>
+  <div id="dialog">
+    <%= render :partial => "snippet_form" %>
+  </div>
+    <div id="project_snippets">
+    <%= render @project.snippets %>
+  </div>
+  <%= render :partial => "note_form" %>
+</div>
+

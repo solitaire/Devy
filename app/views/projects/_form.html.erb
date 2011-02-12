@@ -1,0 +1,26 @@
+<%= form_for @project, :html => {:multipart => true} do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+      <ul>
+      <% @project.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="actions">
+    <%=  f.label :name %>
+    <p> <%= f.text_field :name %></p>
+    <%= f.label :description %>
+    <p><%= f.text_area :description %></p>
+    <%= f.label :status %>
+    <p><%= select_project_status  %></p>
+    <%= f.label :tag_list %>
+    <p><%= f.text_field  :tag_list %></p>
+    <div id="screenshots">
+      <%= render :partial => 'image_form', :locals => { :form => f, :image => @project.images.build } %>
+    </div>
+    <p> <%= f.submit %></p>
+  </div>
+<% end %>

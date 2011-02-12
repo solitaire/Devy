@@ -1,0 +1,8 @@
+    <div class="links">
+      <%= link_to image_tag("/images/edit.png"), edit_path_for_snippet(snippet) %>
+      <%= link_to image_tag("/images/delete.png"), path_for_snippet(snippet), :method => "delete", :confirm => "Are you sure?" %>
+  </div>
+<div class="snippet">
+  <div><%= coderay(snippet)%></div>
+  <div class="tags"><%= render :partial => "tags/tag", :collection => snippet.tags %></div>
+</div>

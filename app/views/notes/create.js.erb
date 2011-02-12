@@ -1,0 +1,4 @@
+/* Add the new note to the bottom of the list */
+$("#project_notes").append("<%= escape_javascript(render(@note)) %>");
+$("#note_<%= @note.id %>").effect("highlight", {}, 3000);
+

@@ -1,0 +1,16 @@
+<div class="attachments">
+  <%= form.fields_for :images do |image| %>
+  <% if image.object.new_record? %>
+    <%= image.file_field :attachment %>
+    <p><%= link_to_add_fields "Add Screenshot", form, :images %></p>
+  <% end %>
+  <% unless image.object.new_record?%>
+    <div class="thumbnail">
+      <%= link_to( image_tag(image.object.url(:small)), image.object.url(:original) ) %>
+      <%= image.check_box :_destroy %>
+    </div>
+    <%end%>
+<% end %>
+</div>
+
+

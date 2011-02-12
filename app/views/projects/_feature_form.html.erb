@@ -1,0 +1,6 @@
+<div class="feature_form">
+  <%= form_for [@project, Feature.new]  do |f|%>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+  <% end %>
+</div>

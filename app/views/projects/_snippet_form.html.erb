@@ -1,0 +1,6 @@
+<div class="snippet_form">
+  <%= form_for  [@project, Snippet.new], :html =>{:id => "snippet_form"}, :remote => true do |f|%>
+    <%=f.text_area :body%>
+    <p><%= select_languages %></p>
+  <% end %>
+</div>

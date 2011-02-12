@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Devy</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "jquery.rails.js", "application.js", "jquery-ui-1.8.5.custom.min.js" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <div id="header">
+    <a href="#" class="showdashboard"><img src="/images/list-add.png" alt="Show and Hide the Dashboard"></img></a>
+    <a href="#" class="hidedashboard"><img src="/images/list-remove.png" alt="Show and Hide the Dashboard"></img></a>
+  </div>
+  <div id="dashboard">
+    <%= render :partial => "shared/dashboard" %>
+  </div>
+  <div id="container">
+    <div id="flash">
+      <%= flash[:notice] %>
+    </div>
+    <div id="linkstohide">
+      <a href="#" class="showmenu"><img src="/images/list-remove.png" alt="Show and Hide the Dashboard"></img></a>
+      <a href="#" class="hidemenu"><img src="/images/list-add.png" alt="Show and Hide the Dashboard"></img></a>
+    </div>
+    <div id="leftnavigation">
+      <%= render :partial => "shared/leftmenu" %>
+    </div>
+    <div id="content">
+      <%= yield %>
+    </div>
+  <div id="footer">Created with Ruby on Rails (3.0.0)</div>
+</div>
+</body>
+</html>

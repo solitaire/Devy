@@ -1,0 +1,11 @@
+  <div class="links">
+    <%=link_to image_tag("/images/edit.png"), edit_path_for_note(note)%>
+    <%=link_to image_tag("/images/delete.png"), path_for_note(note), :method => "delete", :confirm => "Are you sure?"%>
+  </div>
+<div class="note">
+  <div>
+    <%= note.body %>
+  </div>
+  <div class="tags"><%= render :partial => "tags/tag", :collection => note.tags %></div>
+</div>
+
